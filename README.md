@@ -12,6 +12,8 @@ lamp do I need, and where do I put it**, measured against a real standard, befor
 
 Built for [Learn AR with SPECS](https://learn-specs.devpost.com/), Round 2.
 
+**Demo video:** https://youtu.be/l6JuAQY9_hU
+
 ## The one spatial moment
 
 With only the ceiling light on, my laptop's footprint gets about **9 lux** and the whole desk
