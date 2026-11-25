@@ -1,0 +1,74 @@
+- !<AssetImportMetadata/7aeccc32-8a21-4743-9e88-dbe79f2c840b>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> e2503b7d-19ca-4c6f-971c-2a564b49d8f0
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> e2503b7d-19ca-4c6f-971c-2a564b49d8f0
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 2f852058-9d29-46d9-95fe-e5508d298f5b
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/2f852058-9d29-46d9-95fe-e5508d298f5b>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: fdf4fe30-75dc-47f0-9da4-ffca39d1693b
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    aboveColor: false
+    belowColor: false
+    contourColor: false
+    intensity: false
+    material: false
+    resolutionX: false
+    resolutionZ: false
+    shadowColor: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - material: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      resolutionX: !<float> 96.000000
+      resolutionZ: !<float> 48.000000
+      belowColor: !<Vec3> {x: 1.000000, y: 0.780000, z: 0.420000}
+      aboveColor: !<Vec3> {x: 0.550000, y: 0.950000, z: 0.900000}
+      shadowColor: !<Vec3> {x: 0.800000, y: 0.650000, z: 1.000000}
+      contourColor: !<Vec3> {x: 1.000000, y: 1.000000, z: 1.000000}
+      intensity: 0.550000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">LumenHeatmap – desk illuminance texture</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input Asset.Material material {"hint":"Unlit material with a base texture slot; the procedural heatmap is assigned to it."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float resolutionX = 96 {"hint":"Heatmap texels across the desk width.", "widget":"slider", "min":24, "max":160, "step":4}'
+    - '// @input float resolutionZ = 48 {"hint":"Heatmap texels across the desk depth.", "widget":"slider", "min":12, "max":80, "step":2}'
+    - '// @input vec3 belowColor = "{1.0, 0.78, 0.42}" {"hint":"Colour of desk area below the target (light amber).", "widget":"color"}'
+    - '// @input vec3 aboveColor = "{0.55, 0.95, 0.9}" {"hint":"Colour of desk area meeting the target.", "widget":"color"}'
+    - '// @input vec3 shadowColor = "{0.8, 0.65, 1.0}" {"hint":"Colour of the head-shadow patch (light violet).", "widget":"color"}'
+    - '// @input vec3 contourColor = "{1.0, 1.0, 1.0}" {"hint":"Colour of the target contour line.", "widget":"color"}'
+    - '// @input float intensity = 0.55 {"hint":"Overall heatmap opacity/brightness (0-1).", "widget":"slider", "min":0.1, "max":1, "step":0.05}'
+    - '// @ui {"widget":"group_end"}'

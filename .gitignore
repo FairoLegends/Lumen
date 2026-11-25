@@ -1,0 +1,25 @@
+# BEGIN Lens Studio managed Agents-Docs block
+.mcp.json
+.cursor/mcp.json
+.vscode/mcp.json
+.codex/config.toml
+.claude/settings.local.json
+# END Lens Studio managed Agents-Docs block
+
+# Lumen (outside the Lens Studio managed block) — keep build output, local
+# editor state and the signing key out of the repo.
+Cache/
+Workspaces/
+PluginsUserPreferences/
+Support/
+BackUp/
+.vscode/
+/jsconfig.json
+/tsconfig.json
+*.lock
+spk_debug_key.pem
+*.pem
+.DS_Store
+
+# Lens Studio MCP scratch
+.virtual-scene.json

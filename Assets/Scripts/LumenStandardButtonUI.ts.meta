@@ -1,0 +1,71 @@
+- !<AssetImportMetadata/5d705803-87ee-4a96-91cc-e0f6d5e6082b>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 763fbfaa-1fe4-45a9-a83d-fa8ecdaba8d7
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 763fbfaa-1fe4-45a9-a83d-fa8ecdaba8d7
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 35cb458e-5dc3-44df-9d2d-23e9ff08c85e
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/35cb458e-5dc3-44df-9d2d-23e9ff08c85e>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 47900a54-6de5-4ae6-9217-13e144da388d
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    buttonSizeCm: false
+    faceColor: false
+    faceMaterial: false
+    faceMesh: false
+    labelSeconds: false
+    labelSize: false
+    valueColor: false
+    valueSize: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - buttonSizeCm: !<float> 8.000000
+      labelSeconds: !<float> 2.000000
+      labelSize: !<float> 34.000000
+      faceMesh: !<reference.RenderMesh> 00000000-0000-0000-0000-000000000000
+      faceMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      faceColor: !<Vec3> {x: 1.000000, y: 0.950000, z: 0.800000}
+      valueColor: !<Vec3> {x: 0.100000, y: 0.140000, z: 0.300000}
+      valueSize: !<float> 240.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">LumenStandardButtonUI – standard cycle button</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float buttonSizeCm = 8 {"hint":"Button face size (cm).", "widget":"slider", "min":4, "max":16, "step":0.5}'
+    - '// @input float labelSeconds = 2 {"hint":"Seconds the standard label stays visible after a pinch.", "widget":"slider", "min":0.5, "max":6, "step":0.25}'
+    - '// @input float labelSize = 34 {"hint":"Font size of the standard label.", "widget":"slider", "min":10, "max":120, "step":2}'
+    - '// @input Asset.RenderMesh faceMesh {"hint":"Unit box mesh used for the light button face."}'
+    - '// @input Asset.Material faceMaterial {"hint":"Unlit material for the button face (cloned, tinted light)."}'
+    - '// @input vec3 faceColor = "{1.0, 0.95, 0.8}" {"hint":"Button face fill � keep light, dark turns transparent on the additive display.", "widget":"color"}'
+    - '// @input vec3 valueColor = "{0.1, 0.14, 0.3}" {"hint":"Target value text on the button face.", "widget":"color"}'
+    - '// @input float valueSize = 240 {"hint":"Font size of the target value on the face.", "widget":"slider", "min":40, "max":400, "step":5}'
+    - '// @ui {"widget":"group_end"}'

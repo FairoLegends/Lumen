@@ -1,0 +1,59 @@
+- !<AssetImportMetadata/3312b53c-670b-421c-b7d3-85647c68b128>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 72213da5-14b6-4776-915f-af1594b377d4
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 72213da5-14b6-4776-915f-af1594b377d4
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> e89db296-236f-4ec4-a7ad-ed467e51522f
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/e89db296-236f-4ec4-a7ad-ed467e51522f>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 537a15d2-31c9-4f0d-b9d6-1c665c434ff7
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    luxColor: false
+    luxTextSize: false
+    noteSeconds: false
+    noteText: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - luxTextSize: !<float> 110.000000
+      luxColor: !<Vec3> {x: 0.950000, y: 1.000000, z: 1.000000}
+      noteText: "Estimate, not a measurement"
+      noteSeconds: !<float> 5.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">LumenReadoutUI – lux number + estimate note</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float luxTextSize = 220 {"hint":"Font size of the lux number (≈3 cm cap height at default).", "widget":"slider", "min":20, "max":300, "step":2}'
+    - '// @input vec3 luxColor = "{0.95, 1.0, 1.0}" {"hint":"Lux number colour — keep light, the display is additive.", "widget":"color"}'
+    - '// @input string noteText = "Estimate, not a measurement" {"hint":"Text of the disclaimer note shown with the first reading."}'
+    - '// @input float noteSeconds = 5 {"hint":"Seconds the note stays fully visible before fading.", "widget":"slider", "min":1, "max":15, "step":0.5}'
+    - '// @ui {"widget":"group_end"}'

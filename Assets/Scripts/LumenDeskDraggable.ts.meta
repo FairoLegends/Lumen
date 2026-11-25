@@ -1,0 +1,56 @@
+- !<AssetImportMetadata/38159872-e006-42ba-96c5-c2485afb559f>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 535760f8-a548-4e5f-8a25-d8015a149da3
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 535760f8-a548-4e5f-8a25-d8015a149da3
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 402b6f96-f3b6-45d5-8c6e-0ce3859d1bab
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/402b6f96-f3b6-45d5-8c6e-0ce3859d1bab>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: c944cd16-c614-44c5-8163-a2adc61d5daa
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    colliderCenter: false
+    colliderSize: false
+    moveThresholdCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - moveThresholdCm: !<float> 2.000000
+      colliderSize: !<Vec3> {x: 12.000000, y: 10.000000, z: 12.000000}
+      colliderCenter: !<Vec3> {x: 0.000000, y: 5.000000, z: 0.000000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">LumenDeskDraggable – pinch-drag on desk, short pinch = tap</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float moveThresholdCm = 2 {"hint":"A pinch that moves more than this (cm) is a drag and does not count as a tap.", "widget":"slider", "min":0.5, "max":10, "step":0.5}'
+    - '// @input vec3 colliderSize = {12,10,12} {"hint":"Collider box size (cm) — the grab target. Keep generous so it is easy to aim at."}'
+    - "// @input vec3 colliderCenter = {0,5,0} {\"hint\":\"Collider centre offset from this object's origin (cm).\"}"
+    - '// @ui {"widget":"group_end"}'

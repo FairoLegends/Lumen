@@ -1,0 +1,135 @@
+- !<AssetImportMetadata/a480f5de-cce2-437d-931b-351b62e48947>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> a59f0996-ecf4-4dd3-accf-d27a0425fe23
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> a59f0996-ecf4-4dd3-accf-d27a0425fe23
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 6e98909d-b0b1-455c-9488-2424f289cbea
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/6e98909d-b0b1-455c-9488-2424f289cbea>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 68da32b6-c33f-4f14-aec8-dbf9c1152e1a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    cameraObject: false
+    ceilingLight: false
+    ceilingLumens: false
+    debugLog: false
+    desk: false
+    deskDepthCm: false
+    deskWidthCm: false
+    footprint: false
+    footprintDrag: false
+    footprintSizeCm: false
+    head: false
+    headDiameterCm: false
+    heatmap: false
+    lamp: false
+    lampConeDeg: false
+    lampDrag: false
+    lampHeightCm: false
+    lampLumens: false
+    lampShade: false
+    lampStartsOn: false
+    readout: false
+    runSelfTest: false
+    standardButton: false
+    standardLux: false
+    standardNames: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - desk: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      ceilingLight: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      lamp: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      lampDrag: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      lampShade: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      footprint: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      footprintDrag: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      readout: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      standardButton: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      heatmap: !<MappingBased.AssignableType_5> 00000000-0000-0000-0000-000000000000
+      head: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      cameraObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      deskWidthCm: !<float> 120.000000
+      deskDepthCm: !<float> 60.000000
+      footprintSizeCm: !<Vec2> {x: 32.000000, y: 22.000000}
+      ceilingLumens: !<float> 800.000000
+      lampLumens: !<float> 470.000000
+      lampHeightCm: !<float> 45.000000
+      lampConeDeg: !<float> 120.000000
+      lampStartsOn: false
+      headDiameterCm: !<float> 20.000000
+      standardLux: !<float[]>
+        - 300.000000
+        - 500.000000
+      standardNames: !<string[]>
+        - "Home minimum (SNI 6197:2011)"
+        - "Reading & screen work (EN 12464-1:2021)"
+      debugLog: true
+      runSelfTest: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">LumenController – desk illuminance estimator</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input SceneObject desk {"hint":"Desk root; its world position is the centre of the desk TOP surface."}'
+    - '// @input SceneObject ceilingLight {"hint":"Ceiling bulb marker (fixed). Its world position is the light source."}'
+    - '// @input SceneObject lamp {"hint":"Desk lamp root (base on desk). Has LumenDeskDraggable."}'
+    - '// @input AssignableType_1 lampDrag {"hint":"Lamp draggable component."}'
+    - '// @input SceneObject lampShade {"hint":"Lamp shade visual — lit material when on."}'
+    - '// @input SceneObject footprint {"hint":"Laptop footprint root. Has LumenDeskDraggable."}'
+    - '// @input AssignableType_2 footprintDrag {"hint":"Footprint draggable component."}'
+    - '// @input AssignableType_3 readout {"hint":"Lux readout UI on the footprint."}'
+    - '// @input AssignableType_4 standardButton {"hint":"Standard button UI on the desk corner."}'
+    - '// @input AssignableType_5 heatmap {"hint":"Heatmap on the desk top."}'
+    - '// @input SceneObject head {"hint":"Head occluder SceneObject (invisible sphere stand-in)."}'
+    - '// @input SceneObject cameraObject {"hint":"Camera the head follows."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Desk & laptop"}'
+    - '// @input float deskWidthCm = 120 {"hint":"Desk width (cm)."}'
+    - '// @input float deskDepthCm = 60 {"hint":"Desk depth (cm)."}'
+    - '// @input vec2 footprintSizeCm = {32,22} {"hint":"Laptop footprint size W x D (cm)."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Lights"}'
+    - '// @input float ceilingLumens = 800 {"hint":"Ceiling bulb flux (lm), isotropic."}'
+    - '// @input float lampLumens = 470 {"hint":"Desk lamp flux (lm)."}'
+    - '// @input float lampHeightCm = 45 {"hint":"Lamp bulb height above the desk (cm)."}'
+    - '// @input float lampConeDeg = 120 {"hint":"Lamp downward cone, full angle (degrees).", "widget":"slider", "min":30, "max":170, "step":5}'
+    - '// @input bool lampStartsOn {"hint":"Lamp starts on (brief: off)."}'
+    - '// @input float headDiameterCm = 20 {"hint":"Head sphere diameter (cm)."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Standards"}'
+    - '// @input float[] standardLux = {300,500} {"hint":"Target lux values, cycled in order by the button."}'
+    - '// @input string[] standardNames = {"Home minimum (SNI 6197:2011)","Reading & screen work (EN 12464-1:2021)"} {"hint":"Names shown on the button label, same order."}'
+    - '// @input bool debugLog = true {"hint":"Print state changes to the log."}'
+    - '// @input bool runSelfTest {"hint":"Run a one-shot logic self-test at start (prints PASS/FAIL per done criterion, then restores state)."}'
+    - '// @ui {"widget":"group_end"}'
