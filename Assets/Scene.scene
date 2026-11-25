@@ -6,7 +6,6 @@
     - !<own> f5d74682-203a-4970-81ea-9fa7b88c96bb
     - !<own> 28dd08de-97ca-4749-9e18-aeb5e07870ea
     - !<own> 8016f164-6917-4699-8f3d-c5310bd8f701
-    - !<own> df487e8a-50de-4602-9ab7-33860e6e964e
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       - id: 1
@@ -2875,22 +2874,6 @@
   ScriptTypes:
     "":
       {}
-- !<ScriptComponent/d4397c44-3c79-4622-9c9a-03fe23f3626b>
-  PrefabRemaps:
-    []
-  Name: LeafIndex
-  Enabled: true
-  ScriptAsset: !<reference> 28ad3914-d6ce-4ea9-aaf9-45b7e17a7dc0
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      {}
-  ScriptTypes:
-    "":
-      {}
 - !<SceneObject/d4a9c5e3-fe96-4824-9b20-59f5ad39eabd>
   PrefabRemaps:
     []
@@ -3087,21 +3070,6 @@
     - !<own> d4a9c5e3-fe96-4824-9b20-59f5ad39eabd
   Components:
     []
-- !<SceneObject/df487e8a-50de-4602-9ab7-33860e6e964e>
-  PrefabRemaps:
-    []
-  Name: LeafIndex
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> d4397c44-3c79-4622-9c9a-03fe23f3626b
 - !<RenderMeshVisual/e1031f7e-3474-489f-a529-282f7192f812>
   PrefabRemaps:
     []
