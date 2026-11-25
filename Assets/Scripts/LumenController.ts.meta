@@ -29,6 +29,7 @@
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     cameraObject: false
+    ceilingConeDeg: false
     ceilingLight: false
     ceilingLumens: false
     debugLog: false
@@ -78,6 +79,7 @@
       deskDepthCm: !<float> 60.000000
       footprintSizeCm: !<Vec2> {x: 32.000000, y: 22.000000}
       ceilingLumens: !<float> 800.000000
+      ceilingConeDeg: !<float> 180.000000
       lampLumens: !<float> 470.000000
       lampHeightCm: !<float> 45.000000
       lampConeDeg: !<float> 120.000000
@@ -113,15 +115,16 @@
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"separator"}'
     - '// @ui {"widget":"group_start", "label":"Desk & laptop"}'
-    - '// @input float deskWidthCm = 120 {"hint":"Desk width (cm)."}'
-    - '// @input float deskDepthCm = 60 {"hint":"Desk depth (cm)."}'
-    - '// @input vec2 footprintSizeCm = {32,22} {"hint":"Laptop footprint size W x D (cm)."}'
+    - '// @input float deskWidthCm = 101 {"hint":"Desk width (cm)."}'
+    - '// @input float deskDepthCm = 86 {"hint":"Desk depth (cm)."}'
+    - '// @input vec2 footprintSizeCm = {36,25.6} {"hint":"Laptop footprint size W x D (cm)."}'
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"separator"}'
     - '// @ui {"widget":"group_start", "label":"Lights"}'
-    - '// @input float ceilingLumens = 800 {"hint":"Ceiling bulb flux (lm), isotropic."}'
-    - '// @input float lampLumens = 470 {"hint":"Desk lamp flux (lm)."}'
-    - '// @input float lampHeightCm = 45 {"hint":"Lamp bulb height above the desk (cm)."}'
+    - '// @input float ceilingLumens = 1000 {"hint":"Ceiling LED module flux (lm)."}'
+    - '// @input float ceilingConeDeg = 180 {"hint":"Ceiling module emission cone, full angle (degrees, pointing down). 180 = downward hemisphere, >= 360 = all directions."}'
+    - '// @input float lampLumens = 600 {"hint":"Desk lamp flux (lm)."}'
+    - '// @input float lampHeightCm = 50 {"hint":"Lamp bulb height above the desk (cm)."}'
     - '// @input float lampConeDeg = 120 {"hint":"Lamp downward cone, full angle (degrees).", "widget":"slider", "min":30, "max":170, "step":5}'
     - '// @input bool lampStartsOn {"hint":"Lamp starts on (brief: off)."}'
     - '// @input float headDiameterCm = 20 {"hint":"Head sphere diameter (cm)."}'

@@ -65,26 +65,29 @@ export class LumenController extends BaseScriptComponent {
   @ui.group_start("Desk & laptop")
   @input
   @hint("Desk width (cm).")
-  deskWidthCm: number = 120
+  deskWidthCm: number = 101
   @input
   @hint("Desk depth (cm).")
-  deskDepthCm: number = 60
+  deskDepthCm: number = 86
   @input
   @hint("Laptop footprint size W x D (cm).")
-  footprintSizeCm: vec2 = new vec2(32, 22)
+  footprintSizeCm: vec2 = new vec2(36, 25.6)
   @ui.group_end
 
   @ui.separator
   @ui.group_start("Lights")
   @input
-  @hint("Ceiling bulb flux (lm), isotropic.")
-  ceilingLumens: number = 800
+  @hint("Ceiling LED module flux (lm).")
+  ceilingLumens: number = 1000
+  @input
+  @hint("Ceiling module emission cone, full angle (degrees, pointing down). 180 = downward hemisphere, >= 360 = all directions.")
+  ceilingConeDeg: number = 180
   @input
   @hint("Desk lamp flux (lm).")
-  lampLumens: number = 470
+  lampLumens: number = 600
   @input
   @hint("Lamp bulb height above the desk (cm).")
-  lampHeightCm: number = 45
+  lampHeightCm: number = 50
   @input
   @hint("Lamp downward cone, full angle (degrees).")
   @widget(new SliderWidget(30, 170, 5))
@@ -276,7 +279,7 @@ export class LumenController extends BaseScriptComponent {
 
   private lights(): PointLight[] {
     return [
-      {pos: this.ceilingLight.getTransform().getWorldPosition(), lumens: this.ceilingLumens, coneDeg: 360, on: true},
+      {pos: this.ceilingLight.getTransform().getWorldPosition(), lumens: this.ceilingLumens, coneDeg: this.ceilingConeDeg, on: true},
       {pos: this.lampBulbPosition, lumens: this.lampLumens, coneDeg: this.lampConeDeg, on: this._lampOn}
     ]
   }
@@ -353,7 +356,7 @@ export class LumenController extends BaseScriptComponent {
     const lamp0 = this.lampPosition
     const head0 = this.head.getTransform().getWorldPosition()
     const fp = this.footprintPosition
-    const c2 = this._averageLux >= 15 && this._averageLux <= 20 && this._deskBelowTargetFraction === 1 && !this._lampOn
+    const c2 = this._averageLux >= 8 && this._averageLux <= 13 && this._deskBelowTargetFraction === 1 && !this._lampOn
     print("[Lumen][test] C2 ceiling-only " + this._averageLux.toFixed(2) + " lx, below 100%: " + r(c2))
     this.setLampOn(true)
     this.moveLampTo(fp.x + 40, fp.z)

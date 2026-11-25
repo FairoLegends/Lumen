@@ -13,7 +13,7 @@ export class C2InitialStateScenario extends Scenario {
       " below=" + c.deskBelowTargetFraction + " maxDesk=" + c.maxDeskLux.toFixed(1) + " readout=[" + c.readoutText + "]")
     expect(c.lampOn).toBe(false)
     expect(c.targetLux).toBe(300)
-    expect(c.averageLux >= 15 && c.averageLux <= 20).toBe(true)
+    expect(c.averageLux >= 8 && c.averageLux <= 13).toBe(true)
     expect(c.deskBelowTargetFraction).toBe(1)
     expect(c.maxDeskLux < 300).toBe(true)
     expect(c.readoutText.length).toBeGreaterThan(0)
